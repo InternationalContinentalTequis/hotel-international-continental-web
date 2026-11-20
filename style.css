@@ -1,0 +1,399 @@
+/* =====================================
+   HOTEL INTERNATIONAL CONTINENTAL
+   Diseño clásico y sofisticado
+===================================== */
+
+:root {
+    --vino: #54252d;
+    --vino-oscuro: #35171d;
+    --dorado: #b69a68;
+    --marfil: #f8f5ef;
+    --blanco: #ffffff;
+    --texto: #393431;
+    --gris: #77716b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: var(--marfil);
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.contenedor {
+    width: min(1150px, 90%);
+    margin: auto;
+}
+
+.seccion {
+    padding: 85px 0;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: clamp(28px, 4vw, 42px);
+    color: var(--vino);
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.subtitulo-seccion {
+    text-align: center;
+    color: var(--gris);
+    max-width: 650px;
+    margin: 0 auto 45px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    background: var(--blanco);
+    border-bottom: 1px solid #e8e0d4;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.barra-navegacion {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo-hotel {
+    color: var(--vino);
+    font-size: 23px;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.logo-hotel span {
+    display: block;
+    color: var(--dorado);
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.menu a:hover {
+    color: var(--dorado);
+}
+
+.boton {
+    display: inline-block;
+    padding: 13px 25px;
+    background: var(--vino);
+    color: white;
+    border: 1px solid var(--vino);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: var(--vino-oscuro);
+}
+
+.boton-dorado {
+    background: var(--dorado);
+    border-color: var(--dorado);
+    color: white;
+}
+
+.boton-dorado:hover {
+    background: #987d50;
+}
+
+/* PORTADA */
+
+.portada {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background:
+        linear-gradient(rgba(35, 20, 19, 0.58), rgba(35, 20, 19, 0.62)),
+        url("imagenes/hotel-exterior.jpg") center/cover no-repeat;
+    padding: 80px 20px;
+}
+
+.portada-contenido {
+    max-width: 850px;
+}
+
+.portada-etiqueta {
+    color: #e1c99d;
+    letter-spacing: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.portada h1 {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.15;
+    font-weight: normal;
+    margin: 22px 0;
+}
+
+.portada p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* HABITACIONES */
+
+.grid-habitaciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta-habitacion {
+    background: white;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+}
+
+.tarjeta-habitacion img {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+}
+
+.habitacion-info {
+    padding: 25px;
+}
+
+.habitacion-info h3 {
+    color: var(--vino);
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.habitacion-info p {
+    color: var(--gris);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.precio {
+    color: var(--vino);
+    font-size: 23px;
+    font-weight: bold;
+}
+
+/* SERVICIOS */
+
+.fondo-oscuro {
+    background: var(--vino-oscuro);
+    color: white;
+}
+
+.fondo-oscuro .titulo-seccion {
+    color: white;
+}
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.servicio {
+    text-align: center;
+    padding: 30px 20px;
+    border: 1px solid rgba(255,255,255,0.18);
+}
+
+.servicio h3 {
+    color: #dfc89f;
+    font-size: 21px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.servicio p {
+    color: #e2d9d2;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+/* GALERÍA */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* RESERVACIONES */
+
+.reservacion {
+    background: white;
+    padding: 40px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+    max-width: 850px;
+    margin: auto;
+}
+
+.formulario-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--vino);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd3c7;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.reservacion-total {
+    background: var(--marfil);
+    padding: 20px;
+    margin: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* CONTACTO */
+
+.contacto {
+    background: #eee8dd;
+    text-align: center;
+}
+
+.contacto p {
+    margin: 8px 0;
+}
+
+/* PIE DE PÁGINA */
+
+.pie-pagina {
+    background: #24171a;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.pie-pagina h2 {
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.pie-pagina p {
+    color: #c9bdb5;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.creditos {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 800px) {
+    .barra-navegacion {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .grid-habitaciones,
+    .grid-servicios,
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .grid-habitaciones,
+    .grid-servicios,
+    .galeria,
+    .formulario-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reservacion {
+        padding: 22px;
+    }
+
+    .portada {
+        min-height: 480px;
+    }
+
+    .reservacion-total {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
